@@ -1,0 +1,252 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="built-on" content="2022-09-05T15:57:52.267102">
+    <meta name="build-number" content="${buildNumber}">
+    <title>Includes | Stardust Sandbox</title>
+    <script id="virtual-toc-data" type="application/json">[
+        {
+            "id": "include-element",
+            "level": 0,
+            "title": "Include element",
+            "anchor": "#include-element"
+        },
+        {
+            "id": "include-usage",
+            "level": 1,
+            "title": "Usage",
+            "anchor": "#include-usage"
+        },
+        {
+            "id": "include-states",
+            "level": 1,
+            "title": "States",
+            "anchor": "#include-states"
+        },
+        {
+            "id": "if-element",
+            "level": 0,
+            "title": "If element",
+            "anchor": "#if-element"
+        },
+        {
+            "id": "if-usage",
+            "level": 1,
+            "title": "Usage",
+            "anchor": "#if-usage"
+        },
+        {
+            "id": "if-states",
+            "level": 1,
+            "title": "States",
+            "anchor": "#if-states"
+        },
+        {
+            "id": "include-nested",
+            "level": 1,
+            "title": "Include a snippet with includes in it",
+            "anchor": "#include-nested"
+        }
+    ]</script>
+    <link href="https://resources.jetbrains.com/storage/help-app/v5/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png">
+    <link rel="manifest" href="https://jetbrains.com/site.webmanifest">
+    <link rel="mask-icon" href="https://jetbrains.com/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000"/>
+    <meta name="msapplication-TileImage"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"/>
+    <meta name="image" content=""><!-- Open Graph -->
+    <meta property="og:title" content="Includes | Stardust Sandbox"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content="Stardust Sandbox Help"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/cool-page.html"/>
+    <!-- End Open Graph --><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="Includes | Stardust Sandbox">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage -->
+    <script type="application/ld+json"> {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/cool-page.html#webpage",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/cool-page.html",
+        "name": "Includes | Stardust Sandbox",
+        "description": "",
+        "image": "",
+        "inLanguage": "en-US"
+    }</script><!-- End Schema.org --><!-- Schema.org WebSite -->
+    <script type="application/ld+json"> {
+        "@type": "WebSite",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/#website",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/",
+        "name": "Stardust Sandbox Help"
+    }</script><!-- End Schema.org --></head>
+<body data-id="Includes" data-main-title="Includes" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}"
+      data-template="article" data-breadcrumbs="">
+<div class="wrapper">
+    <main class="panel _main">
+        <header class="panel__header">
+            <div class="container"><h3>Stardust Sandbox 1.0.mvp Help</h3>
+                <div class="shortcuts-switcher"><label for="switch-shortcuts">Keymap:</label><select
+                        class="select _shortcuts" height="1" id="switch-shortcuts">
+                    <option data-group="secondary" value="secondary_emacs"> Emacs</option>
+                    <option data-group="secondary" value="secondary_macos" selected> macOS</option>
+                    <option data-group="primary" value="primary_intellij_idea_classic_macos"> IntelliJ IDEA Classic
+                        (macOS)
+                    </option>
+                    <option data-group="primary" value="primary_windows" selected> Windows</option>
+                </select></div>
+                <div class="panel-trigger"></div>
+            </div>
+        </header>
+        <section class="panel__content">
+            <div class="container">
+                <article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Includes" id="Includes.topic"
+                                                                               data-availability-limit="Supertag">
+                    Includes</h1>
+                    <p id="566b72ea_21">In Writerside you can reuse elements and customize them depending on the
+                        context.</p>
+                    <section class="chapter"><h2 id="include-element" data-toc="include-element">Include element</h2>
+                        <section class="chapter"><h3 id="include-usage" data-toc="include-usage">Usage</h3>
+                            <p id="566b72ea_22">In topics you can insert the <code class="code " id="566b72ea_23">include</code>
+                                elements with the <code class="code " id="566b72ea_24">from</code> attribute that points
+                                to the topic where the included content resides, and the <code class="code "
+                                                                                               id="566b72ea_25">id</code>
+                                attribute that matches the id attribute of the snippet.</p></section>
+                        <section class="chapter"><h3 id="include-states" data-toc="include-states">States</h3>
+                            <p id="566b72ea_26">Below is a simple included block.</p>
+                            <aside data-type="warning" class="prompt" data-title="" id="566b72ea_27"><p
+                                    id="566b72ea_28">This is <span class="emphasis" id="566b72ea_29">warning</span>. It
+                                is stronger than a Caution; it means &quot;Don't do this.&quot;.</p></aside>
+                            <p id="566b72ea_30">Below is an included block with a variable.</p>
+                            <aside data-type="warning" class="prompt" data-title="" id="566b72ea_31"><p
+                                    id="566b72ea_32"> This feature will be deprecated in 1.7 version of the Stardust
+                                Sandbox.</p></aside>
+                            <p id="566b72ea_33">Below is an included block with an instance filter.</p>
+                            <aside data-type="warning" class="prompt" data-title="" id="566b72ea_34"><p
+                                    id="566b72ea_35"> This feature will be deprecated in 1.2 version of the Stardust
+                                Sandbox.</p></aside>
+                        </section>
+                    </section>
+                    <section class="chapter"><h2 id="if-element" data-toc="if-element">If element</h2>
+                        <section class="chapter"><h3 id="if-usage" data-toc="if-usage">Usage</h3>
+                            <p id="566b72ea_36">Use <code class="code " id="566b72ea_37">if</code> element to select
+                                certain portions of content that match or does not match the filter value.</p></section>
+                        <section class="chapter"><h3 id="if-states" data-toc="if-states">States</h3>
+                            <p id="use-filter-a">Below A filter elements should be included.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_38"><p>This displayed only
+                                for the A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_39"><p>This one is without
+                                filters.</p></aside>
+                            <p id="use-filter-b">Below B filter elements should be included.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_40"><p>This displayed only
+                                for the B.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_41"><p>This displayed only
+                                for not A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_42"><p>This one is without
+                                filters.</p></aside>
+                            <p id="use-filters-ac">Below is a block with both A and C used, so elements with filters A
+                                and C should be included.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_43"><p>This displayed only
+                                for the A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_44"><p>This displayed only
+                                for the C.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_45"><p>This displayed only
+                                for not A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_46"><p>This one is without
+                                filters.</p></aside>
+                            <p id="use-not-a-filter">Below is a block with !a filter, so all not A elements should be
+                                included.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_47"><p>This displayed only
+                                for the B.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_48"><p>This displayed only
+                                for the C.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_49"><p>This displayed only
+                                for not A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_50"><p>This one is without
+                                filters.</p></aside>
+                            <p id="empty-use-filter">Below is a block with empty filter, so all elements without filters
+                                and &quot;not something&quot; should be included.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_51"><p>This displayed only
+                                for not A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_52"><p>This one is without
+                                filters.</p></aside>
+                            <p id="not-empty-use-filter">Below is a block with not empty filer.</p>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_53"><p>This displayed only
+                                for not A.</p></aside>
+                            <aside data-type="note" class="prompt" data-title="" id="566b72ea_54"><p>This one is without
+                                filters.</p></aside>
+                            <p id="566b72ea_55">Below is a block with empty use-filter and filter.</p>
+                            <aside data-type="warning" class="prompt" data-title="" id="566b72ea_56"><p
+                                    id="566b72ea_57">This is <span class="emphasis" id="566b72ea_58">warning</span>. It
+                                is stronger than a Caution; it means &quot;Don't do this.&quot;.</p></aside>
+                            <p id="566b72ea_59">Below is a block with two used filters separated by a comma.</p>
+                            <p id="566b72ea_60">Below is if statement with instance filter.</p>
+                            <p> Foo BarBar. </p></section>
+                        <section class="chapter"><h3 id="include-nested" data-toc="include-nested">Include a snippet
+                            with includes in it</h3>
+                            <section class="procedure-steps" id="566b72ea_61">
+                                <ol class="list _decimal">
+                                    <li class="list__item" id="566b72ea_62"><p>In the window that opens, switch to the
+                                        <span class="control" id="566b72ea_63">Feedback</span> tab.</p></li>
+                                    <li class="list__item" id="566b72ea_64"><p>Use the fields in this tab to separate
+                                        various aspects of your feedback.</p></li>
+                                    <li class="list__item" id="566b72ea_68"><p id="566b72ea_69">By default, the problem
+                                        is submitted anonymously, but you can click <span class="control"
+                                                                                          id="566b72ea_70">change account</span>
+                                        if you want to watch the progress of the reported problem or provide your
+                                        contact details. In the <span class="control" id="566b72ea_71">Submit As</span>
+                                        dialog, you can use the following options:</p>
+                                        <ul class="list _ul" id="566b72ea_72">
+                                            <li class="list__item" id="566b72ea_73"><p><span class="control"
+                                                                                             id="566b72ea_74">Browser authentication</span>
+                                                — use this option to log in to your Google account at <a
+                                                        href="https://youtrack.jetbrains.com" id="566b72ea_75"
+                                                        data-external="true" rel="noopener noreferrer">googles.com</a>
+                                                with two-step authentication.</p></li>
+                                            <li class="list__item" id="566b72ea_76"><p><span class="control"
+                                                                                             id="566b72ea_77">Guest</span>
+                                                — use this option and specify your name and email so that we could
+                                                contact you if needed.</p></li>
+                                        </ul>
+                                    </li>
+                                    <li class="list__item" id="566b72ea_78"><p id="566b72ea_79">Click <span
+                                            class="control" id="566b72ea_80">Submit</span>, if your request is complete
+                                        and you are ready to send it.</p>
+                                        <p id="566b72ea_81">Your feedback report will be sent directly to the support
+                                            teams.</p></li>
+                                </ol>
+                            </section>
+                        </section>
+                    </section>
+                    <div class="last-modified"> Last modified: 05 September 2022</div>
+                    <div data-feedback-placeholder="true"></div>
+                    <div class="navigation-links _bottom"><a class="navigation-links__prev" href="abba-page.html">about
+                        the ABBA</a> <a class="navigation-links__next" href="about-sandbox.html">About sandbox</a></div>
+                </article>
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://resources.jetbrains.com/storage/help-app/v5/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="built-on" content="2022-09-05T15:57:52.296607">
+    <meta name="build-number" content="${buildNumber}">
+    <title>Complex deflists | Stardust Sandbox</title>
+    <script id="virtual-toc-data" type="application/json">[
+        {
+            "id": "embedded-server",
+            "level": 0,
+            "title": "embeddedServer",
+            "anchor": "#embedded-server"
+        },
+        {
+            "id": "hocon-file",
+            "level": 0,
+            "title": "HOCON file",
+            "anchor": "#hocon-file"
+        },
+        {
+            "id": "custom-property",
+            "level": 0,
+            "title": "Example: How to specify an environment using a custom property",
+            "anchor": "#custom-property"
+        }
+    ]</script>
+    <link href="https://resources.jetbrains.com/storage/help-app/v5/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png">
+    <link rel="manifest" href="https://jetbrains.com/site.webmanifest">
+    <link rel="mask-icon" href="https://jetbrains.com/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000"/>
+    <meta name="msapplication-TileImage"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"/>
+    <meta name="image" content=""><!-- Open Graph -->
+    <meta property="og:title" content="Complex deflists | Stardust Sandbox"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content="Stardust Sandbox Help"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/complex-deflists.html"/>
+    <!-- End Open Graph --><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="Complex deflists | Stardust Sandbox">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage -->
+    <script type="application/ld+json"> {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/complex-deflists.html#webpage",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/complex-deflists.html",
+        "name": "Complex deflists | Stardust Sandbox",
+        "description": "",
+        "image": "",
+        "inLanguage": "en-US"
+    }</script><!-- End Schema.org --><!-- Schema.org WebSite -->
+    <script type="application/ld+json"> {
+        "@type": "WebSite",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/#website",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/",
+        "name": "Stardust Sandbox Help"
+    }</script><!-- End Schema.org --></head>
+<body data-id="Complex_deflists" data-main-title="Complex deflists"
+      data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article"
+      data-breadcrumbs="Experiments">
+<div class="wrapper">
+    <main class="panel _main">
+        <header class="panel__header">
+            <div class="container"><h3>Stardust Sandbox 1.0.mvp Help</h3>
+                <div class="shortcuts-switcher"><label for="switch-shortcuts">Keymap:</label><select
+                        class="select _shortcuts" height="1" id="switch-shortcuts">
+                    <option data-group="secondary" value="secondary_emacs"> Emacs</option>
+                    <option data-group="secondary" value="secondary_macos" selected> macOS</option>
+                    <option data-group="primary" value="primary_intellij_idea_classic_macos"> IntelliJ IDEA Classic
+                        (macOS)
+                    </option>
+                    <option data-group="primary" value="primary_windows" selected> Windows</option>
+                </select></div>
+                <div class="panel-trigger"></div>
+            </div>
+        </header>
+        <section class="panel__content">
+            <div class="container">
+                <article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Complex_deflists"
+                                                                               id="Complex_deflists.topic">Complex
+                    deflists</h1>
+                    <p id="b86be3d6_2">Ktor allows you to configure various server parameters, such as a host address
+                        and port, <a href="chapter.html" id="b86be3d6_3"
+                                     data-tooltip="This is the default chapter in expanded state.">modules</a> to load,
+                        enable the development mode, and so on. The configuration depends on the way you used to create
+                        a server - <a href="#embedded-basic" id="b86be3d6_4"
+                                      data-tooltip="The code snippet below shows the basic server setup with the Netty engine and the 8080 port.">embeddedServer
+                            or EngineMain</a>:</p>
+                    <ul class="list _ul" id="b86be3d6_5">
+                        <li class="list__item" id="b86be3d6_6"><p id="b86be3d6_7">For <a href="#embedded-server"
+                                                                                         id="b86be3d6_8"
+                                                                                         data-tooltip="The embeddedServer function accepts different parameters for configuring a server, including a server engine, a host and port to listen, and so on. In this section, we'll take a look at several examples of running embeddedServer with different setting.">embeddedServer</a>,
+                            you can configure server parameters in code by passing the required parameters to the <code
+                                    class="code " id="b86be3d6_9">embeddedServer</code> constructor.</p></li>
+                        <li class="list__item" id="b86be3d6_10"><p id="b86be3d6_11">For <code class="code "
+                                                                                              id="b86be3d6_12">EngineMain</code>,
+                            Ktor loads its configuration from an <a href="#hocon-file" id="b86be3d6_13"
+                                                                    data-tooltip="If you use EngineMain to start a server, Ktor loads configurations settings from the application.conf HOCON file placed in application resources. This file should contain at least modules to load specified using the ktor.application.modules property, for example:">external
+                                file</a> that uses the <a
+                                    href="https://github.com/lightbend/config/blob/master/HOCON.md" id="b86be3d6_14"
+                                    data-external="true" rel="noopener noreferrer">HOCON</a> format. This way provides
+                            more flexibility to configure a server and allows you to change a configuration without
+                            recompiling your application. Moreover, you can run your application from a command line and
+                            override the required server parameters by passing corresponding <a href="#command-line"
+                                                                                                id="b86be3d6_15"
+                                                                                                data-tooltip="If you use .EngineMain to create a server, you can run a packaged application from a command line and override the required server parameters by passing corresponding command-line arguments. For example, you can override a port specified in the application.conf file in the following…">command-line</a>
+                            arguments.</p></li>
+                    </ul>
+                    <section class="chapter"><h2 id="embedded-server" data-toc="embedded-server">embeddedServer</h2>
+                        <p id="b86be3d6_16">The <a
+                                href="https://api.ktor.io/ktor-server/ktor-server-host-common/io.ktor.server.engine/embedded-server.html"
+                                id="b86be3d6_17" data-external="true" rel="noopener noreferrer">embeddedServer</a>
+                            function accepts different parameters for configuring a server, including a server engine, a
+                            host and port to listen, and so on. In this section, we'll take a look at several examples
+                            of running <code class="code " id="b86be3d6_18">embeddedServer</code> with different
+                            setting.</p>
+                        <section class="chapter"><h3 id="embedded-basic" data-toc="embedded-basic">Basic
+                            configuration</h3>
+                            <p id="b86be3d6_19">The code snippet below shows the basic server setup with the Netty
+                                engine and the <code class="code " id="b86be3d6_20">8080</code> port.</p>
+                            <div class="code-block" data-lang="kotlin" data-disable-link-processing="true">@Test
+                                fun testSum() {
+                                val expected = 42
+                                assertEquals(expected, testSample.sum(40, 2))
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_22">Note that you can set the <code class="code "
+                                                                                id="b86be3d6_23">port</code> parameter
+                                to <code class="code " id="b86be3d6_24">0</code> to run the server on a random port. The
+                                <code class="code " id="b86be3d6_25">embeddedServer</code> function returns an engine
+                                instance, so you can get a port value in code using the <a
+                                        href="https://api.ktor.io/ktor-server/ktor-server-host-common/io.ktor.server.engine/-application-engine/resolved-connectors.html"
+                                        id="b86be3d6_26" data-external="true" rel="noopener noreferrer">ApplicationEngine.resolvedConnectors</a>
+                                function.</p></section>
+                        <section class="chapter"><h3 id="embedded-engine" data-toc="embedded-engine">Engine
+                            configuration</h3>
+                            <p id="b86be3d6_27">In the example below, we've added the <code class="code "
+                                                                                            id="b86be3d6_28">configure</code>
+                                parameter for configuring setting specific for a selected engine.</p>
+                            <div class="code-block" data-lang="kotlin" data-disable-link-processing="true">@Test
+                                fun testSum() {
+                                val expected = 42
+                                assertEquals(expected, testSample.sum(40, 2))
+                                }
+                                }
+                            </div>
+                        </section>
+                        <section class="chapter"><h3 id="embedded-custom" data-toc="embedded-custom">Custom
+                            environment</h3>
+                            <p id="b86be3d6_30">The example below shows how to run a server with a custom environment
+                                represented by the <a
+                                        href="https://api.ktor.io/ktor-server/ktor-server-host-common/ktor-server-host-common/io.ktor.server.engine/-application-engine-environment/index.html"
+                                        id="b86be3d6_31" data-external="true" rel="noopener noreferrer">ApplicationEngineEnvironment</a>
+                                interface.</p>
+                            <div class="code-block" data-lang="kotlin" data-disable-link-processing="true">@Test
+                                fun testSum() {
+                                val expected = 42
+                                assertEquals(expected, testSample.sum(40, 2))
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_33">You can also use a custom environment to serve HTTPS. The <a
+                                    href="https://github.com/ktorio/ktor-documentation/tree/2.0.0/codeSnippets/snippets/ssl-embedded-server"
+                                    id="b86be3d6_34" data-external="true"
+                                    rel="noopener noreferrer">ssl-embedded-server</a> example shows how to do this.</p>
+                        </section>
+                    </section>
+                    <section class="chapter"><h2 id="hocon-file" data-toc="hocon-file">HOCON file</h2>
+                        <section class="chapter"><h3 id="hocon-overview" data-toc="hocon-overview">Overview</h3>
+                            <p id="b86be3d6_35">If you use <a href="chapter.html" id="b86be3d6_36"
+                                                              data-tooltip="This is the default chapter in expanded state.">EngineMain</a>
+                                to start a server, Ktor loads configurations settings from the <span class="filepath"
+                                                                                                     id="b86be3d6_37">application.conf</span>
+                                HOCON file placed in application resources. This file should contain at least <a
+                                        href="chapter.html" id="b86be3d6_38"
+                                        data-tooltip="This is the default chapter in expanded state.">modules to
+                                    load</a> specified using the <code class="code " id="b86be3d6_39">ktor.application.modules</code>
+                                property, for example:</p>
+                            <div class="code-block" data-lang="none">
+                                ktor {
+                                application {
+                                modules = [ com.example.ApplicationKt.module ]
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_41">In this case, Ktor will call the <code class="code " id="b86be3d6_42">Application.module</code>
+                                function for the <span class="filepath" id="b86be3d6_43">Application.kt</span> file
+                                below:</p>
+                            <div class="code-block" data-lang="kotlin" data-disable-link-processing="true">@Test
+                                fun testSum() {
+                                val expected = 42
+                                assertEquals(expected, testSample.sum(40, 2))
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_45">Besides modules to load, you can configure various server settings,
+                                including <a href="#predefined-properties" id="b86be3d6_46"
+                                             data-tooltip="Below is a list of predefined settings that you can use inside a configuration file.">predefined</a>
+                                (such as a port or host, SSL settings, etc.) and custom ones. Let's take a look at
+                                several examples.</p>
+                            <ul class="list _ul" id="b86be3d6_47">
+                                <li class="list__item" id="b86be3d6_48"><p id="b86be3d6_49">In the example below, a
+                                    server listening port is set to <code class="code " id="b86be3d6_50">8080</code>
+                                    using the <code class="code " id="b86be3d6_51">ktor.deployment.port</code> property.
+                                </p>
+                                    <div class="code-block" data-lang="none" data-disable-link-processing="true">const
+                                        testHost = '127.0.0.1';
+                                        const testObject = {};
+                                        const testPort = 3000;
+                                    </div>
+                                </li>
+                                <li class="list__item" id="b86be3d6_53"><p id="b86be3d6_54">The example below enables
+                                    Ktor to listen on the <code class="code " id="b86be3d6_55">8443</code> SSL port and
+                                    specifies the required SSL settings in a separate <code class="code "
+                                                                                            id="b86be3d6_56">security</code>
+                                    block.</p>
+                                    <div class="code-block" data-lang="none" data-disable-link-processing="true"></div>
+                                </li>
+                                <li class="list__item" id="b86be3d6_58"><p id="b86be3d6_59">The <span class="filepath"
+                                                                                                      id="b86be3d6_60">application.conf</span>
+                                    file below contains a custom <code class="code " id="b86be3d6_61">jwt</code> group
+                                    to store JWT settings.</p>
+                                    <div class="code-block" data-lang="none" data-disable-link-processing="true"></div>
+                                    <p id="b86be3d6_63">You can <a href="#read-configuration-in-code" id="b86be3d6_64"
+                                                                   data-tooltip="Ktor allows you to access property values specified in application.conf in code. For example, if you've specified the ktor.deployment.port property,...">read
+                                        and handle such settings</a> in code.</p></li>
+                            </ul>
+                            <aside data-type="warning" class="prompt" data-title="" id="b86be3d6_65"><p
+                                    id="b86be3d6_66">Note that sensitive data (like secret keys, database connection
+                                settings, and so on) should not be stored in the configuration file as plain text.
+                                Consider using <a href="#environment-variables" id="b86be3d6_67"
+                                                  data-tooltip="In HOCON, you can substitute parameters with environment variables by using the ${ENV} syntax. For example, you can assign the PORT environment variable to the ktor.deployment.port property in the following way:">environment
+                                    variables</a> to specify such parameters.</p></aside>
+                        </section>
+                        <section class="chapter"><h3 id="predefined-properties" data-toc="predefined-properties">
+                            Predefined properties</h3>
+                            <p id="b86be3d6_68">Below is a list of predefined settings that you can use inside a <a
+                                    href="#hocon-overview" id="b86be3d6_69"
+                                    data-tooltip="If you use EngineMain to start a server, Ktor loads configurations settings from the application.conf HOCON file placed in application resources. This file should contain at least modules to load specified using the ktor.application.modules property, for example:">configuration
+                                file</a>.</p>
+                            <dl id="b86be3d6_70" data-style="title-left" data-title-width="wide">
+                                <dt id="b86be3d6_71" data-expandable="false">ktor.deployment.host</dt>
+                                <dd><p id="b86be3d6_72">A host address.</p>
+                                    <p id="b86be3d6_73"><span class="emphasis" id="b86be3d6_74">Example</span>: <code
+                                            class="code " id="b86be3d6_75">0.0.0.0</code></p></dd>
+                                <dt id="b86be3d6_76" data-expandable="false">ktor.deployment.port</dt>
+                                <dd><p id="b86be3d6_77">A listening port. You can set this property to <code
+                                        class="code " id="b86be3d6_78">0</code> to run the server on a random port.</p>
+                                    <p id="b86be3d6_79"><span class="emphasis" id="b86be3d6_80">Example</span>: <code
+                                            class="code " id="b86be3d6_81">8080</code>, <code class="code "
+                                                                                              id="b86be3d6_82">0</code>
+                                    </p></dd>
+                                <dt id="b86be3d6_83" data-expandable="false">ktor.deployment.sslPort</dt>
+                                <dd><p id="b86be3d6_84">A listening SSL port. You can set this property to <code
+                                        class="code " id="b86be3d6_85">0</code> to run the server on a random port.</p>
+                                    <p id="b86be3d6_86"><span class="emphasis" id="b86be3d6_87">Example</span>: <code
+                                            class="code " id="b86be3d6_88">8443</code>, <code class="code "
+                                                                                              id="b86be3d6_89">0</code>
+                                    </p>
+                                    <aside data-type="note" class="prompt" data-title="" id="b86be3d6_90"><p
+                                            id="b86be3d6_91">Note that SSL requires additional options <a href="#ssl"
+                                                                                                          id="b86be3d6_92"
+                                                                                                          data-tooltip="Below is a list of predefined settings that you can use inside a configuration file.">listed
+                                        below</a>.</p></aside>
+                                </dd>
+                                <dt id="b86be3d6_93" data-expandable="false">ktor.deployment.watch</dt>
+                                <dd><p id="b86be3d6_94">Watch paths used for <a href="chapter.html" id="b86be3d6_95"
+                                                                                data-tooltip="This is the default chapter in expanded state.">auto-reloading</a>.
+                                </p></dd>
+                                <dt id="b86be3d6_96" data-expandable="false">ktor.deployment.rootPath</dt>
+                                <dd><p id="b86be3d6_97">A <a href="chapter.html" id="b86be3d6_98"
+                                                             data-tooltip="This is the default chapter in expanded state.">servlet</a>
+                                    context path.</p>
+                                    <p id="b86be3d6_99"><span class="emphasis" id="b86be3d6_100">Example</span>: <code
+                                            class="code " id="b86be3d6_101">/</code></p></dd>
+                                <dt id="b86be3d6_102" data-expandable="false">ktor.deployment.shutdown.url</dt>
+                                <dd><p id="b86be3d6_103">A shutdown URL. Note that this option uses the <a
+                                        href="chapter.html" id="b86be3d6_104"
+                                        data-tooltip="This is the default chapter in expanded state.">Chapter</a>.
+                                    plugin.</p></dd>
+                                <dt id="b86be3d6_105" data-expandable="false"></dt>
+                                <dd><p id="b86be3d6_106">Properties specific for engines. Learn more from <a
+                                        href="chapter.html" id="b86be3d6_107"
+                                        data-tooltip="This is the default chapter in expanded state.">Chapter</a>.</p>
+                                </dd>
+                            </dl>
+                            <p id="ssl">If you've set <code class="code "
+                                                            id="b86be3d6_108">ktor.deployment.sslPort</code>, you need
+                                to specify the following SSL-specific properties:</p>
+                            <dl id="b86be3d6_109" data-style="title-left" data-title-width="wide">
+                                <dt id="b86be3d6_110" data-expandable="false">ktor.security.ssl.keyStore</dt>
+                                <dd><p id="b86be3d6_111">An SSL key store.</p></dd>
+                                <dt id="b86be3d6_112" data-expandable="false">ktor.security.ssl.keyAlias</dt>
+                                <dd><p id="b86be3d6_113">An alias for the SSL key store.</p></dd>
+                                <dt id="b86be3d6_114" data-expandable="false">ktor.security.ssl.keyStorePassword</dt>
+                                <dd><p id="b86be3d6_115">A password for the SSL key store.</p></dd>
+                                <dt id="b86be3d6_116" data-expandable="false">ktor.security.ssl.privateKeyPassword</dt>
+                                <dd><p id="b86be3d6_117">A password for the SSL private key.</p></dd>
+                            </dl>
+                        </section>
+                        <section class="chapter"><h3 id="environment-variables" data-toc="environment-variables">
+                            Environment variables</h3>
+                            <p id="b86be3d6_118">In HOCON, you can substitute parameters with environment variables by
+                                using the <code class="code " id="b86be3d6_119">${ENV}</code> syntax. For example, you
+                                can assign the <code class="code " id="b86be3d6_120">PORT</code> environment variable to
+                                the <code class="code " id="b86be3d6_121">ktor.deployment.port</code> property in the
+                                following way:</p>
+                            <div class="code-block" data-lang="kotlin">
+                                ktor {
+                                deployment {
+                                port = ${PORT}
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_123">In this case, an environment variable value will be used to specify a
+                                listening port. If the <code class="code " id="b86be3d6_124">PORT</code> environment
+                                variable variable doesn't exist at runtime, you can provide a default port value before
+                                assigning <code class="code " id="b86be3d6_125">${?PORT}</code> as follows:</p>
+                            <div class="code-block" data-lang="kotlin">
+                                ktor {
+                                deployment {
+                                port = 8080
+                                port = ${?PORT}
+                                }
+                                }
+                            </div>
+                        </section>
+                        <section class="chapter"><h3 id="read-configuration-in-code"
+                                                     data-toc="read-configuration-in-code">Read configuration in
+                            code</h3>
+                            <p id="b86be3d6_127">Ktor allows you to access property values specified in <span
+                                    class="filepath" id="b86be3d6_128">application.conf</span> in code. For example, if
+                                you've specified the <code class="code " id="b86be3d6_129">ktor.deployment.port</code>
+                                property,...</p>
+                            <div class="code-block" data-lang="kotlin">
+                                ktor {
+                                deployment {
+                                port = 8080
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_131">... you can access the application's configuration using <a
+                                    href="https://api.ktor.io/ktor-server/ktor-server-core/ktor-server-core/io.ktor.application/-application-environment/config.html"
+                                    id="b86be3d6_132" data-external="true" rel="noopener noreferrer">ApplicationEnvironment.config</a>
+                                and get the required property value in the following way:</p>
+                            <div class="code-block" data-lang="kotlin">
+                                fun Application.module() {
+                                val port = environment.config.propertyOrNull(&quot;ktor.deployment.port&quot;)?.getString()
+                                ?: &quot;8080&quot;
+                                routing {
+                                get {
+                                call.respondText(&quot;Listening on port $port&quot;)
+                                }
+                                }
+                                }
+                            </div>
+                            <p id="b86be3d6_134">This is especially useful when you keep <a href="#custom-property"
+                                                                                            id="b86be3d6_135"
+                                                                                            data-tooltip="You might want to do different things depending on whether a server is running locally or on a production machine. To achieve this, you can add a custom property in application.conf and initialize it with a dedicated environment variable whose value depends on whether a server is…">custom
+                                settings</a> in a configuration file and need to access its values.</p></section>
+                        <section class="chapter"><h3 id="command-line" data-toc="command-line">Command line</h3>
+                            <p id="b86be3d6_136">If you use <a href="chapter.html" id="b86be3d6_137"
+                                                               data-tooltip="This is the default chapter in expanded state.">.EngineMain</a>
+                                to create a server, you can run a packaged application from a command line and override
+                                the required server parameters by passing corresponding command-line arguments. For
+                                example, you can override a port specified in the <span class="filepath"
+                                                                                        id="b86be3d6_138">application.conf</span>
+                                file in the following way:</p>
+                            <div class="code-block" data-lang="none">
+                                java -jar sample-app.jar -port=8080
+                            </div>
+                            <p id="b86be3d6_140">The available command-line options are listed below:</p>
+                            <dl id="b86be3d6_141" data-style="title-left" data-title-width="narrow">
+                                <dt id="b86be3d6_142" data-expandable="false">-jar</dt>
+                                <dd><p id="b86be3d6_143">A path to JAR file.</p></dd>
+                                <dt id="b86be3d6_144" data-expandable="false">-config</dt>
+                                <dd><p id="b86be3d6_145">A path to a custom configuration file used instead of <span
+                                        class="filepath" id="b86be3d6_146">application.conf</span> from resources.</p>
+                                    <div class="code-block" data-lang="none">
+                                        java -jar sample-app.jar -config=anotherfile.conf
+                                    </div>
+                                </dd>
+                                <dt id="b86be3d6_148" data-expandable="false">-host</dt>
+                                <dd><p id="b86be3d6_149">A host address.</p></dd>
+                                <dt id="b86be3d6_150" data-expandable="false">-port</dt>
+                                <dd><p id="b86be3d6_151">A listening port.</p></dd>
+                                <dt id="b86be3d6_152" data-expandable="false">-watch</dt>
+                                <dd><p id="b86be3d6_153">Watch paths used for <a href="chapter.html" id="b86be3d6_154"
+                                                                                 data-tooltip="This is the default chapter in expanded state.">.auto-reloading</a>.
+                                </p></dd>
+                            </dl>
+                            <p id="b86be3d6_155"><a href="chapter.html" id="b86be3d6_156"
+                                                    data-tooltip="This is the default chapter in expanded state.">SSL-specific</a>
+                                options:</p>
+                            <dl id="b86be3d6_157" data-style="title-left" data-title-width="narrow">
+                                <dt id="b86be3d6_158" data-expandable="false">-sslPort</dt>
+                                <dd><p id="b86be3d6_159">A listening SSL port.</p></dd>
+                                <dt id="b86be3d6_160" data-expandable="false">-sslKeyStore</dt>
+                                <dd><p id="b86be3d6_161">An SSL key store.</p></dd>
+                            </dl>
+                            <p id="b86be3d6_162">If you need to override a <a href="#predefined-properties"
+                                                                              id="b86be3d6_163"
+                                                                              data-tooltip="Below is a list of predefined settings that you can use inside a configuration file.">predefined
+                                property</a> that doesn't have a corresponding command-line option, use the <code
+                                    class="code " id="b86be3d6_164">-P</code> flag, for example:</p>
+                            <div class="code-block" data-lang="none">
+                                java -jar sample-app.jar -P:ktor.deployment.callGroupSize=7
+                            </div>
+                        </section>
+                    </section>
+                    <section class="chapter"><h2 id="custom-property" data-toc="custom-property">Example: How to specify
+                        an environment using a custom property</h2>
+                        <p id="b86be3d6_166">You might want to do different things depending on whether a server is
+                            running locally or on a production machine. To achieve this, you can add a custom property
+                            in <span class="filepath" id="b86be3d6_167">application.conf</span> and initialize it with a
+                            dedicated <a href="#environment-variables" id="b86be3d6_168"
+                                         data-tooltip="In HOCON, you can substitute parameters with environment variables by using the ${ENV} syntax. For example, you can assign the PORT environment variable to the ktor.deployment.port property in the following way:">environment
+                                variable</a> whose value depends on whether a server is running locally or on
+                            production. In the example below, the <code class="code " id="b86be3d6_169">KTOR_ENV</code>
+                            environment variable is assigned to a custom <code class="code " id="b86be3d6_170">ktor.environment</code>
+                            property.</p>
+                        <div class="code-block" data-lang="kotlin">
+                            ktor {
+                            environment = ${?KTOR_ENV}
+                            }
+                        </div>
+                        <p id="b86be3d6_172">You can access the <code class="code "
+                                                                      id="b86be3d6_173">ktor.environment</code> value at
+                            runtime by <a href="#read-configuration-in-code" id="b86be3d6_174"
+                                          data-tooltip="Ktor allows you to access property values specified in application.conf in code. For example, if you've specified the ktor.deployment.port property,...">reading
+                                configuration in code</a> and perform the required actions:</p>
+                        <div class="code-block" data-lang="kotlin">
+                            fun Application.module() {
+                            val env = environment.config.propertyOrNull(&quot;ktor.environment&quot;)?.getString()
+                            routing {
+                            get {
+                            call.respondText(when (env) {
+                            &quot;dev&quot; -&gt; &quot;Development&quot;
+                            &quot;_prod&quot; -&gt; &quot;Production&quot;
+                            else -&gt; &quot;...&quot;
+                            })
+                            }
+                            }
+                            }
+                        </div>
+                    </section>
+                    <div class="last-modified"> Last modified: 05 September 2022</div>
+                    <div data-feedback-placeholder="true"></div>
+                    <div class="navigation-links _bottom"><a class="navigation-links__prev" href="red-code-issues.html">Red
+                        issues</a> <a class="navigation-links__next" href="wh-3321-list.html">WH-3321-list</a></div>
+                </article>
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://resources.jetbrains.com/storage/help-app/v5/app.js"></script>
+</body>
+</html>

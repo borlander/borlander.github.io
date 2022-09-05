@@ -1,0 +1,182 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-colors-preset="contrast" data-primary-color="#307FFF">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="built-on" content="2022-09-05T15:57:52.303607">
+    <meta name="build-number" content="${buildNumber}">
+    <title>Variables | Stardust Sandbox</title>
+    <script id="virtual-toc-data" type="application/json">[
+        {
+            "id": "Chapter-1",
+            "level": 0,
+            "title": "My chapter 1",
+            "anchor": "#Chapter-1"
+        },
+        {
+            "id": "Chapter-3",
+            "level": 0,
+            "title": "Excluded from product `n`",
+            "anchor": "#Chapter-3"
+        },
+        {
+            "id": "Chapter-4",
+            "level": 0,
+            "title": "Both referring and declaring code uses variables",
+            "anchor": "#Chapter-4"
+        },
+        {
+            "id": "Chapter-5",
+            "level": 0,
+            "title": "Images that use variables as part of their src",
+            "anchor": "#Chapter-5"
+        },
+        {
+            "id": "Chapter-6",
+            "level": 0,
+            "title": "Includes that use variables as part of element-id",
+            "anchor": "#Chapter-6"
+        },
+        {
+            "id": "include-with-overriding-var",
+            "level": 0,
+            "title": "Include with a variable",
+            "anchor": "#include-with-overriding-var"
+        }
+    ]</script>
+    <link href="https://resources.jetbrains.com/storage/help-app/v5/app.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png">
+    <link rel="manifest" href="https://jetbrains.com/site.webmanifest">
+    <link rel="mask-icon" href="https://jetbrains.com/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000"/>
+    <meta name="msapplication-TileImage"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"/>
+    <meta name="msapplication-square70x70logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"/>
+    <meta name="msapplication-square150x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"/>
+    <meta name="msapplication-wide310x150logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"/>
+    <meta name="msapplication-square310x310logo"
+          content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"/>
+    <meta name="image" content=""><!-- Open Graph -->
+    <meta property="og:title" content="Variables | Stardust Sandbox"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content="Stardust Sandbox Help"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/variables.html"/>
+    <!-- End Open Graph --><!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="Variables | Stardust Sandbox">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage -->
+    <script type="application/ld+json"> {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/variables.html#webpage",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/1.0.mvp/variables.html",
+        "name": "Variables | Stardust Sandbox",
+        "description": "",
+        "image": "",
+        "inLanguage": "en-US"
+    }</script><!-- End Schema.org --><!-- Schema.org WebSite -->
+    <script type="application/ld+json"> {
+        "@type": "WebSite",
+        "@id": "http://www.jetbrains.com/help/stardust-sandbox/#website",
+        "url": "http://www.jetbrains.com/help/stardust-sandbox/",
+        "name": "Stardust Sandbox Help"
+    }</script><!-- End Schema.org --></head>
+<body data-id="Variables" data-main-title="Variables" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}"
+      data-template="article" data-breadcrumbs="">
+<div class="wrapper">
+    <main class="panel _main">
+        <header class="panel__header">
+            <div class="container"><h3>Stardust Sandbox 1.0.mvp Help</h3>
+                <div class="shortcuts-switcher"><label for="switch-shortcuts">Keymap:</label><select
+                        class="select _shortcuts" height="1" id="switch-shortcuts">
+                    <option data-group="secondary" value="secondary_emacs"> Emacs</option>
+                    <option data-group="secondary" value="secondary_macos" selected> macOS</option>
+                    <option data-group="primary" value="primary_intellij_idea_classic_macos"> IntelliJ IDEA Classic
+                        (macOS)
+                    </option>
+                    <option data-group="primary" value="primary_windows" selected> Windows</option>
+                </select></div>
+                <div class="panel-trigger"></div>
+            </div>
+        </header>
+        <section class="panel__content">
+            <div class="container">
+                <article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Variables"
+                                                                               id="Variables.topic">Variables</h1>
+                    <p id="variables-intro">Stardust Sandbox is a variable</p>
+                    <p id="2e7f2027_5">Some text</p>
+                    <p id="nonexisting-variable">This will not be resolved: %i-do-not-exist%</p>
+                    <section class="chapter"><h2 id="Chapter-1" data-toc="Chapter-1">My chapter 1</h2>
+                        <p id="just-p">Element with simple id (without vars)</p>
+                        <p id="with-good-var-">Element id contains a good var</p>
+                        <p id="with-bad-var-%bad-var%">Element id contains unknown var</p></section>
+                    <section class="chapter"><h2 id="Chapter-3" data-toc="Chapter-3">Excluded from product `n`</h2>
+                        <p id="check-wh-3535-3">Only for product s</p></section>
+                    <section class="chapter"><h2 id="Chapter-4" data-toc="Chapter-4">Both referring and declaring code
+                        uses variables</h2>
+                        <p><a href="#abc-para" id="2e7f2027_6"
+                              data-tooltip="My id contains a variable, link to me also contains a variable">Variables</a>
+                        </p>
+                        <p id="abc-para">My id contains a variable, link to me also contains a variable</p>
+                        <p><a href="#abc-para-2" id="2e7f2027_7"
+                              data-tooltip="My id contains a variable, link to me also contains a variable">Variables</a>
+                        </p>
+                        <p id="abc-para-2">My id is fixed, the link to me contains a variable</p>
+                        <p><a href="#abc-para-3" id="2e7f2027_8"
+                              data-tooltip="My id contains a variable, link to me also contains a variable">Variables</a>
+                        </p>
+                        <p id="abc-para-3">My id contains a variable, the link to me is fixed</p></section>
+                    <section class="chapter"><h2 id="Chapter-5" data-toc="Chapter-5">Images that use variables as part
+                        of their src</h2>
+                        <figure id="2e7f2027_9"><img alt="Image Part Added Parameter Screen Color"
+                                                     title="Image Part Added Parameter Screen Color"
+                                                     src="/help/img/stardust-sandbox/1.0/%25imagePartNoExist%25AddedParameter.Screen.%5BColor%5D.png"
+                                                     class=""/></figure>
+                        <p><img alt="Image Part Added Parameter Screen Color"
+                                title="Image Part Added Parameter Screen Color" id="2e7f2027_10"
+                                src="/help/img/stardust-sandbox/1.0/ThemedIcon.SomePartAddedParameter.Screen.%5BColor%5D.png"
+                                class="inline-icon-"/> <img alt="Image Part Added Parameter Screen Color"
+                                                            title="Image Part Added Parameter Screen Color"
+                                                            id="2e7f2027_11"
+                                                            src="/help/img/stardust-sandbox/1.0/ThemedIcon.AddedParameter.Screen.%5BColor%5D.png"
+                                                            class="inline-icon-" width="16" height="16"/></p></section>
+                    <section class="chapter"><h2 id="Chapter-6" data-toc="Chapter-6">Includes that use variables as part
+                        of element-id</h2></section>
+                    <section class="chapter"><h2 id="include-with-overriding-var"
+                                                 data-toc="include-with-overriding-var">Include with a variable</h2>
+                        <p>Here is the include as is (`In the ... dialog, please ...`) </p>
+                        <p id="p-include-as-is"> In the <span class="control"
+                                                              id="2e7f2027_12">Settings/Preferences</span> dialog ,
+                            please enter all the values.</p>
+                        <p id="2e7f2027_13"></p>
+                        <p> And here we are going to override the parameter with something else (`Please open the ...
+                            dialog and ...`) </p>
+                        <p id="p-include-override-var"> Please open the <span class="control" id="2e7f2027_14">Settings/Preferences</span>
+                            dialog again and check <span class="control" id="2e7f2027_15">Version Control | Git</span>
+                            there.</p></section>
+                    <div class="last-modified"> Last modified: 05 September 2022</div>
+                    <div data-feedback-placeholder="true"></div>
+                    <div class="navigation-links _bottom"><a class="navigation-links__prev" href="about-sandbox.html">About
+                        sandbox</a> <a class="navigation-links__next" href="markdown-code-blocks.html">Markdown code
+                        blocks</a></div>
+                </article>
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://resources.jetbrains.com/storage/help-app/v5/app.js"></script>
+</body>
+</html>
